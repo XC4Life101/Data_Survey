@@ -1,70 +1,43 @@
 <?php
-    function saveFormData() {
-        $file = "data.txt";
-    
-        $name = $_POST["name"];
-        $email = $_POST["email"];
-        $age = $_POST["age"];
-        $bird = $_POST["bird"];
-        $anim = $_POST["anim"];
-        $rept = $_POST["rept"];
-        $amph = $_POST["amph"];
-        $arth = $_POST["arth"];
-        $moll = $_POST["moll"];
-        $other = $_POST["other"];
-        $mamm = $_POST["mamm"];
-        $fish = $_POST["fish"];
-    
-        if (isset($name, $email, $age, $bird, $anim, $rept, $amph, $arth, $moll, $other, $mamm, $fish)) {
-            $fp = fopen($file, "a+");
-            $txt = "Name: " . $name . "\nEmail: " . $email . "\nAge: " . $age . "\nFavorite Animal: " . $anim . "\nFavorite Bird: " . $bird . "\nFavorite Mammal: " . $mamm . "\nFavorite Reptile: " . $rept . "\nFavorite Amphibian: " . $amph . "\nFavorite Arthropod: " . $arth . "\nFavorite Mollusk: " . $moll . "\nFavorite Fish: " . $fish . "\nFavorite Animal Unlisted: " . $other . "\n\n";
-            fwrite($fp, $txt);
-            fclose($fp);
-            header("Location: data.php");
-            exit();
-        } 
-        else {
-            echo json_encode(array("error" => "Missing form data"));
-        }
-    }
-
-    function readData($filename) {
-        $data = [];
-        if (file_exists($filename)) {
-            $file = fopen($filename, 'r');
-            $currentFavoriteAnimal = null;
-            while (($line = fgets($file)) !== false) {
-                $line = trim($line);
-                if (strpos($line, 'Favorite Animal:') !== false) {
-                    $currentFavoriteAnimal = trim(substr($line, strlen('Favorite Animal:')));
-                    if ($currentFavoriteAnimal !== '') {
-                        if (!isset($data[$currentFavoriteAnimal])) {
-                            $data[$currentFavoriteAnimal] = 0;
-                        }
-                        $data[$currentFavoriteAnimal]++;
-                    }
-                }
-            }
-            fclose($file);
-        }
-        return $data;
-    }
-    
-    $action = isset($_GET['action']) ? $_GET['action'] : '';
-    
-    switch ($action) {
-        case 'saveFormData':
-            saveFormData();
-            break;
-
-        case 'readData':
-            $filename = 'data.txt';
-            $data = readData($filename);
-            echo json_encode($data);
-            break;
-    
-        default:
-            echo json_encode(array("error" => "Invalid action"));
-            break;
-    }
+    include 'action.php';
+    $data = readData('data.txt');
+    $jsonData = json_encode($data);
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey Data</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>Survey Central</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="survey.php">Survey</a></li>
+                    <li><a href="data.php" class="active">Data</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div>
+            <canvas id="myChart"></canvas>
+        </div>
+        <select id="questionSelect" class="cta-button" style="margin: 20px;">
+        </select>
+        <script>
+            const chartData = <?php echo $jsonData; ?>;
+            generateDropdown(chartData);
+        </script>
+        <footer>
+            <p>&copy; 2024 Survey Central; Created by Liam Zadoorian</p>
+        </footer>
+    </body>
+</html>
