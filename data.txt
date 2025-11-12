@@ -1,27 +1,225 @@
-Name: Liam
-Email: 
-Age: 
-Q1: Running
-Q2: 
-Q3: 
-Q4: 
-Q5: 
+Name: Liam Zadoorian
+Birth Month: January
+Birth Day: 15
+Q1: Rock
+Q2: Italian
+Q3: N.A.
+Q4: Blue
+Q5: Decadent
 
-Name: Sara
-Email: 
-Age: 
-Q1: Killing
-Q2: 
-Q3: 
-Q4: 
-Q5: 
+Name: Sam Leslie
+Birth Month: September
+Birth Day: 19
+Q1: Electronic
+Q2: Mediterranean 
+Q3: Georgia Bulldogs
+Q4: White
+Q5: Golf
 
-Name: Jeffrey
-Email: 
-Age: 
-Q1: Skating
-Q2: Pizza
-Q3: Movies
-Q4: Beach
-Q5: Alone
+Name: JT Mathison
+Birth Month: January
+Birth Day: 23
+Q1: N.A.
+Q2: N.A.
+Q3: Georgia Bulldogs
+Q4: Black / Red
+Q5: Weirdo
+
+Name: Caleb Yoder
+Birth Month: November
+Birth Day: 3
+Q1: Pop
+Q2: Mexican
+Q3: Georgia Bulldogs
+Q4: Blue
+Q5: Young
+
+Name: Michael Banks
+Birth Month: April
+Birth Day: 19
+Q1: Indie / Rap
+Q2: Italian
+Q3: Texas A&M Aggies
+Q4: Red
+Q5: Skibidi
+
+Name: Dalton Benefield
+Birth Month: December
+Birth Day: 7
+Q1: Gospel
+Q2: Mexican
+Q3: Georgia Bulldogs
+Q4: Blue
+Q5: Run
+
+Name: Brexton Hathaway
+Birth Month: September
+Birth Day: 6
+Q1: Indie Pop
+Q2: Mexican
+Q3: N.A.
+Q4: Purple
+Q5: Jesus
+
+Name: Ryan McGilvray
+Birth Month: May
+Birth Day: 10
+Q1: Indie
+Q2: Mexican
+Q3: Florida Gators
+Q4: Orange
+Q5: Golden
+
+Name: Mckenzie David
+Birth Month: April
+Birth Day: 7
+Q1: Folk
+Q2: Asian
+Q3: Florida Gators
+Q4: Green
+Q5: Quiz
+
+Name: Connor John Michael Stoots
+Birth Month: December
+Birth Day: 25
+Q1: Rock
+Q2: White
+Q3: Virginia Tech Hokies
+Q4: Lilac Purple
+Q5: Groyper
+
+Name: Emma Mgee
+Birth Month: December 
+Birth Day: 5 
+Q1: Indie 
+Q2: Thai
+Q3: North Carolina Tar Heels
+Q4: Turquoise Green
+Q5: Taco
+
+Name: Railey Prins
+Birth Month: April
+Birth Day: 25
+Q1: Pop
+Q2: Mexican
+Q3: Alabama Crimson Tides
+Q4: Pink
+Q5: Dog
+
+Name: Kyndal Little
+Birth Month: September
+Birth Day: 22
+Q1: Folk
+Q2: American
+Q3: South Carolina Gamecocks
+Q4: Pink
+Q5: Wedding
+
+Name: Brady Thomas
+Birth Month: February
+Birth Day: 17
+Q1: Pop
+Q2: Mexican
+Q3: Alabama Crimson Tides
+Q4: Phthalo Green
+Q5: Sigma
+
+Name: Parker Draughon
+Birth Month: March
+Birth Day: 1
+Q1: Indie Rock
+Q2: Mexican
+Q3: Auburn Tigers
+Q4: Blue
+Q5: Curve 
+
+Name: Adley Burkes
+Birth Month: December
+Birth Day: 9
+Q1: Indie Rock
+Q2: Italian
+Q3: Alabama Crimson Tides
+Q4: Fuchsia Pink
+Q5: Burrito
+
+Name: Franziska Dempwolf
+Birth Month: May
+Birth Day: 10
+Q1: Pop
+Q2: Thai
+Q3: N.A.
+Q4: Purple
+Q5: Run
+
+Name: Ryan Thompson
+Birth Month: August
+Birth Day: 10
+Q1: Psychedelic Rock
+Q2: Mexican
+Q3: Auburn Tigers
+Q4: Forest Green
+Q5: Write
+
+Name: Shelby Morgan
+Birth Month: October
+Birth Day: 15
+Q1: Indie Folk
+Q2: Italian
+Q3: Georgia Bulldogs
+Q4: Green
+Q5: Vision
+
+Name: Ray Sims
+Birth Month: April
+Birth Day: 13
+Q1: Indie
+Q2: Asian
+Q3: N.A.
+Q4: Forest Green
+Q5: Tree
+
+Name: Elizabeth Burrows
+Birth Month: October
+Birth Day: 12
+Q1: Rock
+Q2: Asian
+Q3: Auburn Tigers
+Q4: Pink
+Q5: Deleterious
+
+Name: Jimmy Jalowiec
+Birth Month: June
+Birth Day: 7
+Q1: Rock 
+Q2: Mexican / Italian
+Q3: Wisconsin Badgers
+Q4: Blue
+Q5: Blue
+
+Name: Brodie Norred 
+Birth Month: July 
+Birth Day: 21 
+Q1: Rock 
+Q2: Chinese 
+Q3: Alabama Crimson Tides
+Q4: Green 
+Q5: Lighting 
+
+Name: Shannon Zadoorian
+Birth Month: June
+Birth Day: 26
+Q1: Country
+Q2: Mexican
+Q3: N.A.
+Q4: Red
+Q5: Love
+
+Name: Jeremy Zadoorian
+Birth Month: December
+Birth Day: 6
+Q1: Country Rock
+Q2: Mediterranean
+Q3: N.A.
+Q4: Green
+Q5: Fart
 

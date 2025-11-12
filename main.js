@@ -1,19 +1,23 @@
-function show(shown, hidden) {
-  document.getElementById(shown).style.display='block';
-  document.getElementById(hidden).style.display='none';
-  return false;
-}
+let currentChart = null;
 
-function generateBarChart(allData, question) {
-    const answers = Object.keys(allData[question]);
-    const counts = Object.values(allData[question]);
+function generateBarChart(allData, question, lastWordOnly = false) {
+    let answers = Object.keys(allData[question]);
+    let counts = Object.values(allData[question]);
+
+    if (lastWordOnly) {
+        const processed = {};
+        answers.forEach((ans, i) => {
+            const words = ans.trim().split(/\s+/);
+            const key = words[words.length - 1]; // last word
+            processed[key] = (processed[key] || 0) + counts[i];
+        });
+        answers = Object.keys(processed);
+        counts = Object.values(processed);
+    }
 
     const ctx = document.getElementById("myChart").getContext("2d");
 
-    // Destroy previous chart to avoid stacking
-    if (currentChart) {
-        currentChart.destroy();
-    }
+    if (currentChart) currentChart.destroy();
 
     currentChart = new Chart(ctx, {
         type: 'bar',
@@ -29,37 +33,69 @@ function generateBarChart(allData, question) {
         },
         options: {
             plugins: {
-                title: {
-                    display: true,
-                    text: "Responses for " + question
-                },
+                title: { display: true, text: "Responses for " + question },
                 legend: { display: false }
             },
-            scales: {
-                y: { beginAtZero: true }
-            }
+            scales: { y: { beginAtZero: true } }
         }
     });
 }
 
-let currentChart = null;
-
 function generateDropdown(allData) {
     const select = document.getElementById("questionSelect");
 
-    // Populate dropdown with Q1–Q5
-    Object.keys(allData).forEach(question => {
-        const option = document.createElement("option");
-        option.value = question;
-        option.textContent = question;
-        select.appendChild(option);
+    // Clear dropdown
+    select.innerHTML = "";
+
+    const questions = Object.keys(allData);
+    questions.forEach(q => {
+        const opt = document.createElement("option");
+        opt.value = q;
+        opt.textContent = q;
+        select.appendChild(opt);
     });
 
-    // Auto-load first chart
-    generateBarChart(allData, Object.keys(allData)[0]);
+    // Add toggle checkbox
+    let toggleContainer = document.getElementById("toggleContainer");
+    if (!toggleContainer) {
+        toggleContainer = document.createElement("div");
+        toggleContainer.id = "toggleContainer";
+        toggleContainer.style.margin = "10px 0";
+        select.parentNode.insertBefore(toggleContainer, select.nextSibling);
+    }
+    toggleContainer.innerHTML = "";
 
-    // Change chart when selection changes
+    const toggleCheckbox = document.createElement("input");
+    toggleCheckbox.type = "checkbox";
+    toggleCheckbox.id = "secondWordToggle";
+    const toggleLabel = document.createElement("label");
+    toggleLabel.htmlFor = "secondWordToggle";
+    toggleLabel.textContent = "Basic";
+    toggleContainer.appendChild(toggleCheckbox);
+    toggleContainer.appendChild(toggleLabel);
+
+    let currentQuestion = questions[0];
+
+    function updateChart() {
+        const lastWordMode = toggleCheckbox.checked && (currentQuestion === "Q1" || currentQuestion === "Q4");
+        generateBarChart(allData, currentQuestion, lastWordMode);
+    }
+
+    // Show/hide toggle based on question
+    function updateToggleVisibility() {
+        toggleContainer.style.display = (currentQuestion === "Q1" || currentQuestion === "Q4") ? "block" : "none";
+        toggleCheckbox.checked = false;
+    }
+
+    // Initial chart
+    updateToggleVisibility();
+    updateChart();
+
     select.addEventListener("change", function() {
-        generateBarChart(allData, this.value);
+        currentQuestion = this.value;
+        updateToggleVisibility();
+        updateChart();
     });
+
+    toggleCheckbox.addEventListener("change", updateChart);
 }
