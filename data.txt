@@ -3,7 +3,7 @@ Birth Month: January
 Birth Day: 15
 Q1: Rock
 Q2: Italian
-Q3: N.A.
+Q3: N/A
 Q4: Blue
 Q5: Decadent
 
@@ -19,10 +19,10 @@ Q5: Golf
 Name: JT Mathison
 Birth Month: January
 Birth Day: 23
-Q1: N.A.
-Q2: N.A.
+Q1: N/A
+Q2: N/A
 Q3: Georgia Bulldogs
-Q4: Black / Red
+Q4: Black | Red
 Q5: Weirdo
 
 Name: Caleb Yoder
@@ -37,7 +37,7 @@ Q5: Young
 Name: Michael Banks
 Birth Month: April
 Birth Day: 19
-Q1: Indie / Rap
+Q1: Indie | Rap
 Q2: Italian
 Q3: Texas A&M Aggies
 Q4: Red
@@ -57,7 +57,7 @@ Birth Month: September
 Birth Day: 6
 Q1: Indie Pop
 Q2: Mexican
-Q3: N.A.
+Q3: N/A
 Q4: Purple
 Q5: Jesus
 
@@ -147,7 +147,7 @@ Birth Month: May
 Birth Day: 10
 Q1: Pop
 Q2: Thai
-Q3: N.A.
+Q3: N/A
 Q4: Purple
 Q5: Run
 
@@ -174,7 +174,7 @@ Birth Month: April
 Birth Day: 13
 Q1: Indie
 Q2: Asian
-Q3: N.A.
+Q3: N/A
 Q4: Forest Green
 Q5: Tree
 
@@ -191,7 +191,7 @@ Name: Jimmy Jalowiec
 Birth Month: June
 Birth Day: 7
 Q1: Rock 
-Q2: Mexican / Italian
+Q2: Mexican | Italian
 Q3: Wisconsin Badgers
 Q4: Blue
 Q5: Blue
@@ -210,7 +210,7 @@ Birth Month: June
 Birth Day: 26
 Q1: Country
 Q2: Mexican
-Q3: N.A.
+Q3: N/A
 Q4: Red
 Q5: Love
 
@@ -219,7 +219,79 @@ Birth Month: December
 Birth Day: 6
 Q1: Country Rock
 Q2: Mediterranean
-Q3: N.A.
+Q3: N/A
 Q4: Green
 Q5: Fart
+
+Name: Sam Holmes
+Birth Month: February
+Birth Day: 11
+Q1: Country
+Q2: Mexican
+Q3: Oklahoma State Cowboys
+Q4: Green
+Q5: Banana
+
+Name: Seth Grogan
+Birth Month: June
+Birth Day: 19
+Q1: Pop
+Q2: Italian
+Q3: Auburn Tigers
+Q4: Green
+Q5: Tetraamminedichloroferrate
+
+Name: Eli Holden
+Birth Month: February
+Birth Day: 9
+Q1: Christian
+Q2: Italian
+Q3: Auburn Tigers
+Q4: Mauve Purple
+Q5: Mauve
+
+Name: Paris Zadoorian
+Birth Month: March
+Birth Day: 31
+Q1: Country Pop
+Q2: Mediterranean
+Q3: Oregon Ducks
+Q4: Aquamarine Green
+Q5: Duck
+
+Name: Armando Alberto
+Birth Month: March
+Birth Day: 9
+Q1: Electronic
+Q2: Cuban
+Q3: Florida Gators
+Q4: Blue
+Q5: Glasses
+
+Name: Josh Duke
+Birth Month: November
+Birth Day: 20
+Q1: Country
+Q2: Italian
+Q3: Alabama Crimson Tides
+Q4: Cyan Blue
+Q5: Fallow Deer
+
+Name: Lynn Stallings
+Birth Month: March
+Birth Day: 23
+Q1: Rock
+Q2: Mexican
+Q3: Auburn Tigers
+Q4: Blue
+Q5: Peace
+
+Name: Zachary Ingram
+Birth Month: March
+Birth Day: 25
+Q1: N/A
+Q2: Mexican | Italian
+Q3: N/A
+Q4: Cyan
+Q5: Blood
 

@@ -48,8 +48,7 @@ function readData($filename) {
                 if (strpos($line, "$key:") === 0) {
                     $ans = trim(substr($line, strlen("$key:")));
                     if ($ans !== '') {
-                        // Handle multiple answers separated by '/'
-                        $parts = array_map('trim', explode('/', $ans));
+                        $parts = array_map('trim', explode('|', $ans));
                         foreach ($parts as $part) {
                             $data[$key][$part] = ($data[$key][$part] ?? 0) + 1;
                         }

@@ -1,8 +1,27 @@
+function show(shown, hidden) {
+  document.getElementById(shown).style.display = 'block';
+  document.getElementById(hidden).style.display = 'none';
+  return false;
+}
+
 let currentChart = null;
 
 function generateBarChart(allData, question, lastWordOnly = false) {
     let answers = Object.keys(allData[question]);
     let counts = Object.values(allData[question]);
+
+    if (question === "Birth Month") {
+        const monthOrder = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        const sorted = answers
+            .map((m, i) => ({ month: m, count: counts[i] }))
+            .sort((a, b) => monthOrder.indexOf(a.month) - monthOrder.indexOf(b.month));
+        answers = sorted.map(x => x.month);
+        counts = sorted.map(x => x.count);
+    }
+
 
     if (lastWordOnly) {
         const processed = {};
