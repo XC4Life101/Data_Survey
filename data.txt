@@ -292,6 +292,15 @@ Birth Day: 25
 Q1: N/A
 Q2: Mexican | Italian
 Q3: N/A
-Q4: Cyan
+Q4: Cyan Blue
 Q5: Blood
+
+Name: Joshua Hill
+Birth Month: January
+Birth Day: 31
+Q1: Indie
+Q2: Asian
+Q3: Auburn Tigers
+Q4: Green
+Q5: Liam
 
